@@ -57,9 +57,21 @@ public class MainActivity extends AppCompatActivity {
         RBCcount=findViewById(R.id.rbc);
         Hypertension=findViewById(R.id.htn);
 
+        Age.setFilters(new InputFilter[]{new MinMaxFilter(this,11,90)});
+        BloodPressure.setFilters(new InputFilter[]{new MinMaxFilter(this,60,90)});
         Sugar.setFilters(new InputFilter[]{new MinMaxFilter(this,1.01,1.025)});
-        WBCcount.setFilters(new InputFilter[]{new MinMaxFilter(this,4200.00,11900.000)});
+        BloodGlucoseRandom.setFilters(new InputFilter[]{new MinMaxFilter(this,70.0,219)});
+        BloodUrea.setFilters(new InputFilter[]{new MinMaxFilter(this,10,98)});
+        SerumCreatinine.setFilters(new InputFilter[]{new MinMaxFilter(this,0.40,3.6)});
         Sodium.setFilters(new InputFilter[]{new MinMaxFilter(this,131.00,147.000)});
+        Pottassium.setFilters(new InputFilter[]{new MinMaxFilter(this,2.90,5.500)});
+        Hemoglobin.setFilters(new InputFilter[]{new MinMaxFilter(this,9.60,17.8)});
+        PackedCellVolume.setFilters(new InputFilter[]{new MinMaxFilter(this,29.00,54.00)});
+        WBCcount.setFilters(new InputFilter[]{new MinMaxFilter(this,4200.00,11900.000)});
+        RBCcount.setFilters(new InputFilter[]{new MinMaxFilter(this,3.60,6.500)});
+        Albumin.setFilters(new InputFilter[]{new MinMaxFilter(this,0.00,4.00)});
+        Hypertension.setFilters(new InputFilter[]{new MinMaxFilter(this,0.00,1.00)});
+
 
     }
     public void submitandvalidate(View view)
@@ -195,9 +207,9 @@ public class MainActivity extends AppCompatActivity {
                 postParams.put("Potassium",pot );
                 postParams.put("Hemoglobin",hemo );
                 postParams.put("Packed_Cell_Voume",pcv);
-                postParams.put("White_Blood_Cells_CO=ount",wbc );
+                postParams.put("White_Blood_Cells_Count",wbc );
                 postParams.put("Red_Blood_Cells_Count",rbc);
-                postParams.put("Red_Blood_Cells_Count",htn);
+                postParams.put("Hypertension",htn);
                 postParams.put("Diabetes_Milletus",dm );
                 postParams.put("Coronary_Artery_Disease",cad );
                 postParams.put("Appetite",appet );

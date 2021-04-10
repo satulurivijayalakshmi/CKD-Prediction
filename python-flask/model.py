@@ -4,7 +4,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 import pickle
-df=pd.read_csv("C:\\Users\svija\OneDrive\Desktop\ckd prediction\kidney_disease.csv")
+df=pd.read_csv(".\kidney_disease.csv")
 df.drop('id',axis=1,inplace=True)
 categorical=['rbc','pc','pcc','ba','htn','dm','cad','appet','pe','ane','classification']
 numerical=['age','bp','sg','al','su','bgr','bu','sc','sod','pot','hemo','pcv','wc','rc']
@@ -21,7 +21,6 @@ from sklearn.preprocessing import LabelEncoder
 le=LabelEncoder()
 for i in categorical:
     df[i] = le.fit_transform(df[i])
-    df.info()
     
 train=df.iloc[:,0:7]
 test=df.iloc[:,-1]
