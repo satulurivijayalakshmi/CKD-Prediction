@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age:"
+        android:textColor="@color/black"
+        android:textSize="25sp"></TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/age"></EditText></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BloodPressure:"
+            android:textColor="@color/black"
+            android:textSize="25sp"></TextView>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:id="@+id/bp"></EditText></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Specific Gravity:"
+                android:textColor="@color/black"
+                android:textSize="25sp"></TextView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/sg"></EditText></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Albumin:"
+                android:textColor="@color/black"
+                android:textSize="25sp"></TextView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/al"></EditText></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sugar:"
+                android:textColor="@color/black"
+                android:textSize="25sp"></TextView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:id="@+id/su"></EditText></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red Blood Cells:"
+            android:textColor="@color/black"
+            android:textSize="25sp"></TextView>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radiorc">
+
+            <RadioButton
+                android:id="@+id/radioyrbc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="YES"
+                android:layout_marginTop="10dp"
+                android:checked="false"
+                android:textSize="25sp" />
+
+            <RadioButton
+                android:id="@+id/radionrbc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="NO"
+                android:layout_marginTop="20dp"
+                android:checked="false"
+
+                android:textSize="25sp" />
+        </RadioGroup>  </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pus Cells:"
+                android:textColor="@color/black"
+                android:textSize="25sp"></TextView>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radiopc">
+
+                <RadioButton
+                    android:id="@+id/radioypc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="YES"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="25sp" />
+
+                <RadioButton
+                    android:id="@+id/radionpc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NO"
+                    android:layout_marginTop="20dp"
+                    android:checked="false"
+
+                    android:textSize="25sp" />
+            </RadioGroup>  </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pus Cell Clumps:"
+                android:textColor="@color/black"
+                android:textSize="25sp"></TextView>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radiopcc">
+
+                <RadioButton
+                    android:id="@+id/radioypcc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="YES"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="25sp" />
+
+                <RadioButton
+                    android:id="@+id/radionpcc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NO"
+                    android:layout_marginTop="20dp"
+                    android:checked="false"
+
+                    android:textSize="25sp" />
+            </RadioGroup>  </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bacteria:"
+                android:textColor="@color/black"
+                android:textSize="25sp"></TextView>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioba">
+
+                <RadioButton
+                    android:id="@+id/radioyba"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="YES"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="25sp" />
+
+                <RadioButton
+                    android:id="@+id/radionnba"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NO"
+                    android:layout_marginTop="20dp"
+                    android:checked="false"
+
+                    android:textSize="25sp" />
+            </RadioGroup>  </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blood Glucose Random:"
+            android:textColor="@color/black"
+            android:textSize="25sp"></TextView>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bgr"
+            android:inputType="numberDecimal"></EditText></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blood Urea:"
+            android:textColor="@color/black"
+            android:textSize="25sp"></TextView>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bu"
+            android:inputType="number"></EditText></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Serum Createinine:"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            ></TextView>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sc"
+            android:inputType="numberDecimal"></EditText></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sodium:"
+            android:textColor="@color/black"
+            android:textSize="25sp"></TextView>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sod"></EditText></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pottassium:"
+            android:textColor="@color/black"
+            android:textSize="25sp"></TextView>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pot"
+            android:inputType="numberDecimal"></EditText></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hemoglobin:"
+                android:textColor="@color/black"
+                android:textSize="25sp"></TextView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hemo"
+                android:inputType="numberDecimal"></EditText></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Packed Cell Volume:"
+                android:textColor="@color/black"
+                android:textSize="25sp"></TextView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pcv"
+                android:inputType="numberDecimal"></EditText></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="White Blood Cell Count:"
+                android:textColor="@color/black"
+                android:textSize="25sp"></TextView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/wbc"
+                android:inputType="number"></EditText></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hypertension:"
+                android:textColor="@color/black"
+                android:textSize="25sp"></TextView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/htn"
+                android:inputType="number"></EditText></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Red Blood Cell Count:"
+                android:textColor="@color/black"
+                android:textSize="25sp"></TextView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rbc"
+                android:inputType="number"></EditText></LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diabetus Milletus:"
+            android:textColor="@color/black"
+            android:textSize="25sp"></TextView>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radiodm">
+
+            <RadioButton
+                android:id="@+id/radioydm"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="YES"
+                android:layout_marginTop="10dp"
+                android:checked="false"
+                android:textSize="25sp" />
+
+            <RadioButton
+                android:id="@+id/radiondm"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="NO"
+                android:layout_marginTop="20dp"
+                android:checked="false"
+
+                android:textSize="25sp" />
+        </RadioGroup> </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coronary Artery Disease:"
+                android:textColor="@color/black"
+                android:textSize="25sp"></TextView>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radiocad">
+
+                <RadioButton
+                    android:id="@+id/radioycad"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="YES"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="25sp" />
+
+                <RadioButton
+                    android:id="@+id/radioncad"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NO"
+                    android:layout_marginTop="20dp"
+                    android:checked="false"
+
+                    android:textSize="25sp" />
+
+            </RadioGroup> </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Appetite:"
+                android:textColor="@color/black"
+                android:textSize="25sp"></TextView>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioappet">
+
+                <RadioButton
+                    android:id="@+id/radioyappet"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="YES"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="25sp" />
+
+                <RadioButton
+                    android:id="@+id/radionappet"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NO"
+                    android:layout_marginTop="20dp"
+                    android:checked="false"
+
+                    android:textSize="25sp" />
+
+            </RadioGroup> </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pedal Edema:"
+                android:textColor="@color/black"
+                android:textSize="25sp"></TextView>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radiope">
+
+                <RadioButton
+                    android:id="@+id/radioype"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="YES"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="25sp" />
+
+                <RadioButton
+                    android:id="@+id/radionpe"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NO"
+                    android:layout_marginTop="20dp"
+                    android:checked="false"
+
+                    android:textSize="25sp" />
+
+            </RadioGroup> </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anemia:"
+                android:textColor="@color/black"
+                android:textSize="25sp"></TextView>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioane">
+
+                <RadioButton
+                    android:id="@+id/radioyane"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="YES"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="25sp" />
+
+                <RadioButton
+                    android:id="@+id/radionane"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NO"
+                    android:layout_marginTop="20dp"
+                    android:checked="false"
+
+                    android:textSize="25sp" />
+
+            </RadioGroup> </LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUBMIT"
+            android:onClick="submitandvalidate"
+            android:layout_gravity="center"
+            ></Button>
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,5 @@
+11	24	female	2	rent	little	little	4308	48	business	bad
+			1	2     2         0    0                    31
+12	22	female	2	own	little	moderate	1567	12	radio/TV	good
+            1   2     0    0        1                         1
+https://www.hackerearth.com/practice/algorithms/greedy/basics-of-greedy-algorithms/tutorial/
