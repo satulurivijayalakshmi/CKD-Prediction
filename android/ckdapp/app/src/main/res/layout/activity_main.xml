@@ -98,7 +98,7 @@
                 android:id="@+id/radioyrbc"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="YES"
+                android:text="normal"
                 android:layout_marginTop="10dp"
                 android:checked="false"
                 android:textSize="25sp" />
@@ -107,7 +107,7 @@
                 android:id="@+id/radionrbc"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="NO"
+                android:text="abnormal"
                 android:layout_marginTop="20dp"
                 android:checked="false"
 
@@ -131,7 +131,7 @@
                     android:id="@+id/radioypc"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:text="YES"
+                    android:text="present"
                     android:layout_marginTop="10dp"
                     android:checked="false"
                     android:textSize="25sp" />
@@ -140,7 +140,7 @@
                     android:id="@+id/radionpc"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:text="NO"
+                    android:text="notpresent"
                     android:layout_marginTop="20dp"
                     android:checked="false"
 
@@ -164,7 +164,7 @@
                     android:id="@+id/radioypcc"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:text="YES"
+                    android:text="present"
                     android:layout_marginTop="10dp"
                     android:checked="false"
                     android:textSize="25sp" />
@@ -173,7 +173,7 @@
                     android:id="@+id/radionpcc"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:text="NO"
+                    android:text="notpresent"
                     android:layout_marginTop="20dp"
                     android:checked="false"
 
@@ -197,7 +197,7 @@
                     android:id="@+id/radioyba"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:text="YES"
+                    android:text="present"
                     android:layout_marginTop="10dp"
                     android:checked="false"
                     android:textSize="25sp" />
@@ -206,7 +206,7 @@
                     android:id="@+id/radionnba"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:text="NO"
+                    android:text="notpresent"
                     android:layout_marginTop="20dp"
                     android:checked="false"
 
@@ -438,7 +438,7 @@
                     android:id="@+id/radioyappet"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:text="YES"
+                    android:text="good"
                     android:layout_marginTop="10dp"
                     android:checked="false"
                     android:textSize="25sp" />
@@ -447,7 +447,7 @@
                     android:id="@+id/radionappet"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:text="NO"
+                    android:text="poor"
                     android:layout_marginTop="20dp"
                     android:checked="false"
 
