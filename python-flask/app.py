@@ -51,7 +51,7 @@ def predict():
           'Hemoglobin','Packed_Cell_Volume','WBCcount','RBCcount','Hypertension']] = StandardScaler().fit_transform(data[['Age','Blood_Pressure','Specific_Gravity','Alubmin','Sugar','Blood_Glucose_Random','Blood_Urea','Serum_Creatinine','Sodium','Potassium',
           'Hemoglobin','Packed_Cell_Volume','WBCcount','RBCcount','Hypertension']])
     res=model.predict(data)
-    output=str(res[0])
+    output=res[0]
     
     if output==0:
         res_str="Chronic Kidney Disease is positive" 
