@@ -325,20 +325,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/wbc"
                 android:inputType="number"></EditText></LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hypertension:"
-                android:textColor="@color/black"
-                android:textSize="25sp"></TextView>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/htn"
-                android:inputType="number"></EditText></LinearLayout>
+        
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -353,6 +340,39 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/rbc"
                 android:inputType="number"></EditText></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hypertension:"
+                android:textColor="@color/black"
+                android:textSize="25sp"></TextView>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radiohtn">
+
+                <RadioButton
+                    android:id="@+id/radioyhtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="present"
+                    android:layout_marginTop="10dp"
+                    android:checked="false"
+                    android:textSize="25sp" />
+
+                <RadioButton
+                    android:id="@+id/radionhtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="notpresent"
+                    android:layout_marginTop="20dp"
+                    android:checked="false"
+
+                    android:textSize="25sp" />
+            </RadioGroup>  </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
