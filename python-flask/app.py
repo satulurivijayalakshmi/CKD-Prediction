@@ -42,7 +42,7 @@ def predict():
                                           'Serum_Creatinine','Sodium','Pottasium','Hemoglobin','Packed_Cell_Volume',
                                           'White_Blood_Cell_Count','Red_Blood_Cell_Count','Hypertension','Diabetes_Milletus',
                                           'Coronory_Artery_Disease','Appetite','Pedal_Edema','ane'])
-    categorical=['rc','pc','pcc','ba','htn','dm','cad','appet','pe','ane']
+    categorical=['Red_Blood_Cells','Pus_Cells','Pus_Cell_Clumps','Bacteria','Hypertension','Diabetes_Milletus','Coronory_Artery_Disease','Appetite','Pedal_Edema','ane']
     from sklearn.preprocessing import LabelEncoder
     le=LabelEncoder()
     for i in categorical:
