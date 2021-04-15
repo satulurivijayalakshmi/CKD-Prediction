@@ -38,7 +38,7 @@ def predict():
     ane=request.json['ane']
     datavalues=[[age,bp,sg,al,su,rc,pc,pcc,ba,bgr,bu,sc,sod,pot,hemo,pcv,wbc,rbc,htn,dm,cad,appet,pe,ane]]
     data=pd.DataFrame(datavalues,columns=['Age','Blood_Pressure','Specific_Gravity','Alubmin','Sugar','Red_Blood_Cells',
-                                          'Pus_Cells','Pus_Cell_Clumps','Bacteria','Blood_Glucose_Random','Blood_Urea'
+                                          'Pus_Cells','Pus_Cell_Clumps','Bacteria','Blood_Glucose_Random','Blood_Urea',
                                           'Serum_Creatinine','Sodium','Pottasium','Hemoglobin','Packed_Cell_Volume',
                                           'White_Blood_Cell_Count','Red_Blood_Cell_Count','Hypertension','Diabetes_Milletus',
                                           'Coronory_Artery_Disease','Appetite','Pedal_Edema','ane'])
