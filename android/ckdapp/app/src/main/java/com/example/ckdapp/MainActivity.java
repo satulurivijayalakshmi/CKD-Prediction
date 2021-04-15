@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         Appetite=findViewById(R.id.radioappet);
         PedalEdema=findViewById(R.id.radiope);
         Anemia=findViewById(R.id.radioane);
+        Hypertension=findViewById(R.id.radiohtn);
 
         Age=findViewById(R.id.age);
         BloodPressure=findViewById(R.id.bp);
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         PackedCellVolume=findViewById(R.id.pcv);
         WBCcount=findViewById(R.id.wbc);
         RBCcount=findViewById(R.id.rbc);
-        Hypertension=findViewById(R.id.htn);
+        
 
         Age.setFilters(new InputFilter[]{new MinMaxFilter(this,11,90)});
         BloodPressure.setFilters(new InputFilter[]{new MinMaxFilter(this,60,90)});
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         WBCcount.setFilters(new InputFilter[]{new MinMaxFilter(this,4200.00,11900.000)});
         RBCcount.setFilters(new InputFilter[]{new MinMaxFilter(this,3.60,6.500)});
         Albumin.setFilters(new InputFilter[]{new MinMaxFilter(this,0.00,4.00)});
-        Hypertension.setFilters(new InputFilter[]{new MinMaxFilter(this,0.00,1.00)});
+       
 
 
     }
@@ -90,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         pcv=PackedCellVolume.getText().toString();
         wbc=WBCcount.getText().toString();
         rbc=RBCcount.getText().toString();
-        htn=Hypertension.getText().toString();
+       
 
         int RedBloodCellsID=RedBloodCells.getCheckedRadioButtonId();
         RadioButton redbloodcellsbtn=findViewById(RedBloodCellsID);
@@ -103,6 +104,9 @@ public class MainActivity extends AppCompatActivity {
 
         int BacteriaID=Bacteria.getCheckedRadioButtonId();
         RadioButton bacteriabtn=findViewById(BacteriaID);
+        
+        int HypertensionID=Hypertension.getCheckedRadioButtonId();
+        RadioButton hypertensionbtn=findViewById(HypertensionID);
 
         int DiabetusMilletusID=DiabetusMilletus.getCheckedRadioButtonId();
         RadioButton diabetusmilletusbtn=findViewById(DiabetusMilletusID);
@@ -146,6 +150,13 @@ public class MainActivity extends AppCompatActivity {
         else{
             ba=bacteriabtn.getText().toString();
         }
+        
+        if(HypertensionID==-1){
+            Toast.makeText(this, "Nothing selected,please choose any of the above in Gender", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            htn=hypertensionbtn.getText().toString();
+        }
 
         if(DiabetusMilletusID==-1){
             Toast.makeText(this, "Nothing selected,please choose any of the above in Gender", Toast.LENGTH_SHORT).show();
@@ -184,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(!TextUtils.isEmpty(age)&&(!TextUtils.isEmpty(bp)&&(!TextUtils.isEmpty(sg)&&(!TextUtils.isEmpty(al)&&(!TextUtils.isEmpty(su)&&
                 (!TextUtils.isEmpty(bgr))&&(!TextUtils.isEmpty(bu)&&(!TextUtils.isEmpty(sc)&&(!TextUtils.isEmpty(sod)&&(!TextUtils.isEmpty(pot)
-                &&(!TextUtils.isEmpty(hemo)&&(!TextUtils.isEmpty(pcv)&&(!TextUtils.isEmpty(wbc)&&(!TextUtils.isEmpty(rbc)&&(!TextUtils.isEmpty(htn)))))))))))))))
+                &&(!TextUtils.isEmpty(hemo)&&(!TextUtils.isEmpty(pcv)&&(!TextUtils.isEmpty(wbc)&&(!TextUtils.isEmpty(rbc))))))))))))))
         {
             RequestQueue requestQueue = Volley.newRequestQueue(this);
             final String url = "";
