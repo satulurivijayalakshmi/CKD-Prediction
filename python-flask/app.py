@@ -39,7 +39,7 @@ def predict():
     datavalues=[[age,bp,sg,al,su,rc,pc,pcc,ba,bgr,bu,sc,sod,pot,hemo,pcv,wbc,rbc,htn,dm,cad,appet,pe,ane]]
     data=pd.DataFrame(datavalues,columns=['Age','Blood_Pressure','Specific_Gravity','Alubmin','Sugar','Red_Blood_Cells',
                                           'Pus_Cells','Pus_Cell_Clumps','Bacteria','Blood_Glucose_Random','Blood_Urea',
-                                          'Serum_Creatinine','Sodium','Pottasium','Hemoglobin','Packed_Cell_Volume',
+                                          'Serum_Creatinine','Sodium','Potassium','Hemoglobin','Packed_Cell_Volume',
                                           'White_Blood_Cell_Count','Red_Blood_Cell_Count','Hypertension','Diabetes_Milletus',
                                           'Coronory_Artery_Disease','Appetite','Pedal_Edema','ane'])
     categorical=['Red_Blood_Cells','Pus_Cells','Pus_Cell_Clumps','Bacteria','Hypertension','Diabetes_Milletus','Coronory_Artery_Disease','Appetite','Pedal_Edema','ane']
@@ -48,8 +48,8 @@ def predict():
     for i in categorical:
         data[i] = le.fit_transform(data[i])
     data[['Age','Blood_Pressure','Specific_Gravity','Alubmin','Sugar','Blood_Glucose_Random','Blood_Urea','Serum_Creatinine','Sodium','Potassium',
-          'Hemoglobin','Packed_Cell_Volume','WBCcount','RBCcount','Hypertension']] = StandardScaler().fit_transform(data[['Age','Blood_Pressure','Specific_Gravity','Alubmin','Sugar','Blood_Glucose_Random','Blood_Urea','Serum_Creatinine','Sodium','Potassium',
-          'Hemoglobin','Packed_Cell_Volume','WBCcount','RBCcount','Hypertension']])
+          'Hemoglobin','Packed_Cell_Volume','White_Blood_Cell_Count','Red_Blood_Cell_Count','Hypertension']] = StandardScaler().fit_transform(data[['Age','Blood_Pressure','Specific_Gravity','Alubmin','Sugar','Blood_Glucose_Random','Blood_Urea','Serum_Creatinine','Sodium','Potassium',
+          'Hemoglobin','Packed_Cell_Volume','White_Blood_Cell_Count','Red_Blood_Cell_Count','Hypertension']])
     res=model.predict(data)
     output=res[0]
     
