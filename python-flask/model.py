@@ -6,7 +6,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 from scipy import stats
 
-df=pd.read_csv('C:\\Users\\svija\\OneDrive\\Desktop\\miniprjct\\kidney_disease.csv')
+df=pd.read_csv('kidney_disease.csv')
 categorical=['rbc','pc','pcc','ba','htn','dm','cad','appet','pe','ane','classification']
 numerical=['age','bp','sg','al','su','bgr','bu','sc','sod','pot','hemo','pcv','wc','rc']
 
@@ -44,5 +44,5 @@ pickle.dump(RF, open('model.pkl','wb'))
 # Loading model to compare the results
 model = pickle.load(open('model.pkl','rb'))
 
-print(model.predict([[58, 80, 1.025,0,0,0,0,1,1,131,18,1.1,141,3.5,15.8,53,6800,6.1,1,1,1,0,1,1]]))#negative
-print(model.predict([[73,80,1.02,2,0,1,1,1,1,253,142,4.6,138,5.8,16.5,33,7200,4.3,0,0,0,0,1,1]]))#positive
+#print(model.predict([[58, 80, 1.025,0,0,0,0,1,1,131,18,1.1,141,3.5,15.8,53,6800,6.1,1,1,1,0,1,1]]))#negative
+#print(model.predict([[73,80,1.02,2,0,1,1,1,1,253,142,4.6,138,5.8,16.5,33,7200,4.3,0,0,0,0,1,1]]))#positive
