@@ -1,0 +1,156 @@
+<!--# -*- coding: utf-8 -*-
+"""
+Created on Sat Nov 21 10:48:41 2020
+
+@author: svija
+"""
+
+<!-- This is GUI for Breast Cancer Detection Application Using Machine Learning Classifer -->
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+
+  <style>
+    /* CSS code for button */
+    body {
+      background-color:white;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    /* CSS code for button */
+    .button_css {
+    color: #494949 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 20px;
+    border: 4px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    }
+    
+    .button_css:hover {
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+    }
+.bc{
+font-color:white;
+font-family: "Times New Roman", Times, serif;
+}
+.heading {
+  background-color: #A52260;
+  border: solid 1px #A52260;
+  height: 200px;
+}
+.about{
+  border: solid 1px #A52260;
+}
+.login{
+ border: solid 1px #A52260;
+}
+.logop {
+  width: 40%;
+  vertical-align: middle;
+  float: left;
+  height: 100%;
+}
+
+.myTitle {
+  display: flex;
+  color: white;
+  font-size: 50px;
+  font-style: italic;
+  padding-left: 3%;
+ padding-top:1%;
+  font-family: "Times New Roman", Times, serif;
+}
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Show Indian AI Hospital banner-->
+  
+   <header>
+    <article class="heading">
+      <img class="logop" src="static/images/logo1.png" alt="logo">
+      <h1 class="myTitle">CHRONIC KIDNEY DISEASE PREDICTION</h1>
+    </article>
+  </header>
+<div class="bc">
+<article class="about">
+<p> In today's era everyone is trying to be conscious about health although due to workload and busy schedule
+one gives attention to the health when it shows any symptoms of some kind. But CKD is a disease which doesn't shows
+symptoms at all or in some cases it doesn't show any disease specific symptoms it is hard to predict, detect and prevent
+such a disease and this could be lead to permanently health damage, but machine learning can be hope in this problem
+it is best in prediction and analysis</p>
+</article>
+</div>
+ <div class="login">
+	
+    <!-- Get input for predict the cancer -->
+    <center>
+    <form action="{{ url_for('predict')}}"method="post">
+        <h1>Enter the values for predicting the disease</h1>
+        
+    	<input type="text" name="age" placeholder="age" required="required" />
+        <input type="text" name="bp" placeholder="bp" required="required" />
+        <input type="text" name="sg" placeholder="sg" required="required" />
+		<input type="text" name="al" placeholder="al" required="required" />
+		<br>
+    	<input type="text" name="su" placeholder="su" required="required" />
+        <input type="text" name="rbc" placeholder="rbc" required="required" />
+		<input type="text" name="pc" placeholder="pc" required="required" />
+    	<input type="text" name="pcc" placeholder="pcc" required="required" /><br>
+        <input type="text" name="ba" placeholder="ba" required="required" />
+		<input type="text" name="bgr" placeholder="bgr" required="required" />
+		
+    	<input type="text" name="bu" placeholder="bu" required="required" />
+        <input type="text" name="sc" placeholder="sc " required="required" /><br>
+		<input type="text" name="sod" placeholder="sod" required="required" />
+    	<input type="text" name="pot" placeholder="pot" required="required" />
+        <input type="text" name="wc" placeholder="wc" required="required" />
+		<input type="text" name="rc" placeholder="rc" required="required" />
+		<input type="text" name="hemo" placeholder="hemo" required="required" />
+		<input type="text" name="pcv" placeholder="pcv" required="required" />
+    	<br>
+    	<input type="text" name="htn" placeholder="htn" required="required" />
+        <input type="text" name="dm" placeholder="dm" required="required" />
+		<input type="text" name="cad" placeholder="cad" required="required" />
+    	<input type="text" name="appet" placeholder="appet" required="required" />
+ 
+		<br>
+    	<input type="text" name="pe" placeholder="pe" required="required" />
+        <input type="text" name="ane" placeholder="ane" required="required" />
+		
+        <br>
+        <br>
+        
+        <!-- Show button -->
+        
+            <button type="submit" class="btn btn-primary btn-block btn-large"><strong>Predict Ckd</strong></button></a>
+        
+        
+    </form>
+    </center>
+   
+   <!-- Show predicted output using ML model --> 
+   <div>
+       <center>
+   <h1>{{ prediction_text }}</h1>
+       </center>
+   </div>
+
+ </div>
+
+</body>
+</html>
