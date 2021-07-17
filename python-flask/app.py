@@ -5,7 +5,7 @@ from flask_cors import CORS
 from flask import Flask,request,render_template
 app=Flask(__name__)
 CORS(app)
-model = pickle.load(open('model.pkl', 'rb'))
+model = pickle.load(open('upload/model.pkl', 'rb'))
 @app.route('/')
 def home():
     return render_template('main.html')
