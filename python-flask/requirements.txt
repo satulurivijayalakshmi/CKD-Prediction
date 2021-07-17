@@ -3,4 +3,4 @@ flask
 keras
 imutils
 opencv-python
-
+flask cors
