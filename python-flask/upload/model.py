@@ -31,7 +31,7 @@ cleanup_nums = {"rbc":    {"normal": 0, "abnormal": 1},
 df.replace(cleanup_nums, inplace=True)
 df.dtypes
 
-train=df.iloc[:,0:24]
+train=df.iloc[:,:-1]
 test=df.iloc[:,-1]
 
 X_train,X_test,y_train,y_test=train_test_split(train.values,test.values,test_size=0.2,random_state=0)
@@ -43,6 +43,7 @@ RF.fit(X_train,y_train)
 pickle.dump(RF, open('model.pkl','wb'))
 # Loading model to compare the results
 model = pickle.load(open('model.pkl','rb'))
+
 
 print(model.predict([[58, 80, 1.025,0,0,0,0,1,1,131,18,1.1,141,3.5,15.8,53,6800,6.1,1,1,1,0,1,1]]))#negative
 print(model.predict([[73,80,1.02,2,0,1,1,1,1,253,142,4.6,138,5.8,16.5,33,7200,4.3,0,0,0,0,1,1]]))#positive
