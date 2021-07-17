@@ -1,8 +1,6 @@
+tensorflow==2.4.1
 flask
-numpy
-pandas
-seaborn
-scikit-learn
-sklearn
-requests
-flask-cors
+keras
+imutils
+opencv-python
+pillow
