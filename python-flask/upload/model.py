@@ -6,7 +6,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 from scipy import stats
 
-df=pd.read_csv('kidney_disease.csv')
+df=pd.read_csv('dataset\kidney_disease.csv')
 categorical=['rbc','pc','pcc','ba','htn','dm','cad','appet','pe','ane','classification']
 numerical=['age','bp','sg','al','su','bgr','bu','sc','sod','pot','hemo','pcv','wc','rc']
 
